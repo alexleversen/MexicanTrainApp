@@ -42,6 +42,8 @@ namespace MexicanTrainScoresheet.iOS
             scoreButton.TouchUpInside += ScoreButton_Clicked;
             NavigationItem.LeftBarButtonItem = settingsButton;
             NavigationItem.RightBarButtonItem = addButton;
+            dominoView.PipColor = new CGColor(0.5f, 0.5f, 0.5f);
+            dominoView.PipNumber = 12;
 		}
 
         void HandleTap(int index){
@@ -75,6 +77,8 @@ namespace MexicanTrainScoresheet.iOS
         {
             //TODO: Implement
             Console.WriteLine("Score Button Clicked");
+            dominoView.PipNumber = dominoView.PipNumber - 1;
+            dominoView.SetNeedsDisplay();
         }
 
         void SettingsButton_Clicked(object sender, EventArgs e)
