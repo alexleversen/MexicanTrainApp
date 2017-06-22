@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="13">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4206" translatesAutoresizingMaskIntoConstraints="NO" image="train.gif" misplaced="YES">
+                                <rect key="frame" x="309" y="77" width="150" height="150"/>
+                                <constraints>
+                                    <constraint id="4296" firstAttribute="width" secondItem="4206" secondAttribute="height" multiplier="1:1"/>
+                                    <constraint id="4390" firstItem="4206" firstAttribute="width" constant="150"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="4390"/>
+                                    </mask>
+                                </variation>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4390"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4207" translatesAutoresizingMaskIntoConstraints="NO" image="train.gif" misplaced="YES">
+                                <rect key="frame" x="16" y="77" width="150" height="150"/>
+                                <constraints>
+                                    <constraint id="4297" firstAttribute="width" secondItem="4207" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4208" translatesAutoresizingMaskIntoConstraints="NO" image="train.gif" misplaced="YES">
+                                <rect key="frame" x="603" y="77" width="149" height="150"/>
+                                <constraints>
+                                    <constraint id="4295" firstAttribute="width" secondItem="4208" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4209" translatesAutoresizingMaskIntoConstraints="NO" image="train.gif" misplaced="YES">
+                                <rect key="frame" x="16" y="439" width="150" height="150"/>
+                                <constraints>
+                                    <constraint id="4298" firstAttribute="width" secondItem="4209" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4210" translatesAutoresizingMaskIntoConstraints="NO" image="train.gif" misplaced="YES">
+                                <rect key="frame" x="309" y="859" width="150" height="149"/>
+                                <constraints>
+                                    <constraint id="4292" firstAttribute="width" secondItem="4210" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4211" translatesAutoresizingMaskIntoConstraints="NO" image="train.gif" misplaced="YES">
+                                <rect key="frame" x="603" y="439" width="149" height="150"/>
+                                <constraints>
+                                    <constraint id="4294" firstAttribute="width" secondItem="4211" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4212" translatesAutoresizingMaskIntoConstraints="NO" image="train.gif" misplaced="YES">
+                                <rect key="frame" x="603" y="859" width="149" height="149"/>
+                                <constraints>
+                                    <constraint id="4293" firstAttribute="width" secondItem="4212" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4197" translatesAutoresizingMaskIntoConstraints="NO" image="train.gif" misplaced="YES">
+                                <rect key="frame" x="16" y="859" width="150" height="149"/>
+                                <constraints>
+                                    <constraint id="4299" firstAttribute="width" secondItem="4197" secondAttribute="height" multiplier="1:1"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="4401" translatesAutoresizingMaskIntoConstraints="NO" customClass="FullDominoView">
+                                <rect key="frame" x="310" y="364" width="150" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint id="4404" firstItem="4401" firstAttribute="width" constant="150"/>
+                                    <constraint id="4405" firstAttribute="width" secondItem="4401" secondAttribute="height" multiplier="1:2"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4406" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="341" y="703" width="88" height="30"/>
+                                <state key="normal" title="Score Round">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4315"/>
+                                <exclude reference="4316"/>
+                                <exclude reference="4321"/>
+                                <exclude reference="4322"/>
+                                <exclude reference="4327"/>
+                                <exclude reference="4363"/>
+                                <exclude reference="4364"/>
+                                <exclude reference="4365"/>
+                                <exclude reference="4366"/>
+                                <exclude reference="4367"/>
+                                <exclude reference="4368"/>
+                                <exclude reference="4369"/>
+                                <exclude reference="4370"/>
+                                <exclude reference="4371"/>
+                                <exclude reference="4372"/>
+                                <exclude reference="4373"/>
+                                <exclude reference="4374"/>
+                                <exclude reference="4375"/>
+                                <exclude reference="4376"/>
+                                <exclude reference="4377"/>
+                                <exclude reference="4378"/>
+                                <exclude reference="4379"/>
+                                <exclude reference="4380"/>
+                                <exclude reference="4381"/>
+                                <exclude reference="4382"/>
+                                <exclude reference="4383"/>
+                                <exclude reference="4384"/>
+                                <exclude reference="4385"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="4315"/>
+                                <include reference="4316"/>
+                                <include reference="4321"/>
+                                <include reference="4322"/>
+                                <include reference="4327"/>
+                                <include reference="4363"/>
+                                <include reference="4364"/>
+                                <include reference="4365"/>
+                                <include reference="4366"/>
+                                <include reference="4367"/>
+                                <include reference="4368"/>
+                                <include reference="4369"/>
+                                <include reference="4370"/>
+                                <include reference="4371"/>
+                                <include reference="4372"/>
+                                <include reference="4373"/>
+                                <include reference="4374"/>
+                                <include reference="4375"/>
+                                <include reference="4376"/>
+                                <include reference="4377"/>
+                                <include reference="4378"/>
+                                <include reference="4379"/>
+                                <include reference="4380"/>
+                                <include reference="4381"/>
+                                <include reference="4382"/>
+                                <include reference="4383"/>
+                                <include reference="4384"/>
+                                <include reference="4385"/>
+                            </mask>
+                        </variation>
+                        <constraints>
+                            <constraint id="4363" firstItem="4207" firstAttribute="height" secondItem="4206" secondAttribute="height"/>
+                            <constraint id="4364" firstItem="4206" firstAttribute="height" secondItem="4208" secondAttribute="height"/>
+                            <constraint id="4365" firstItem="4208" firstAttribute="height" secondItem="4211" secondAttribute="height"/>
+                            <constraint id="4366" firstItem="4211" firstAttribute="height" secondItem="4212" secondAttribute="height"/>
+                            <constraint id="4367" firstItem="4212" firstAttribute="height" secondItem="4210" secondAttribute="height"/>
+                            <constraint id="4368" firstItem="4210" firstAttribute="height" secondItem="4197" secondAttribute="height"/>
+                            <constraint id="4369" firstItem="4197" firstAttribute="height" secondItem="4209" secondAttribute="height"/>
+                            <constraint id="4370" firstItem="4207" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
+                            <constraint id="4371" firstItem="4207" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13"/>
+                            <constraint id="4372" firstItem="4206" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="4373" firstItem="4206" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13"/>
+                            <constraint id="4374" firstItem="4208" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13"/>
+                            <constraint id="4375" firstItem="4208" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
+                            <constraint id="4376" firstItem="4211" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="1"/>
+                            <constraint id="4377" firstItem="4211" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
+                            <constraint id="4378" firstItem="4212" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
+                            <constraint id="4379" firstItem="wfy-db-euE" firstAttribute="top" secondItem="4212" secondAttribute="bottom" constant="16"/>
+                            <constraint id="4380" firstItem="4210" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1"/>
+                            <constraint id="4381" firstItem="wfy-db-euE" firstAttribute="top" secondItem="4210" secondAttribute="bottom" constant="16"/>
+                            <constraint id="4382" firstItem="wfy-db-euE" firstAttribute="top" secondItem="4197" secondAttribute="bottom" constant="16"/>
+                            <constraint id="4383" firstItem="4197" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
+                            <constraint id="4384" firstItem="4209" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="1"/>
+                            <constraint id="4385" firstItem="4209" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
+                            <constraint id="4402" firstItem="4401" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1"/>
+                            <constraint id="4403" firstItem="4401" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="2"/>
+                            <constraint id="4407" firstItem="4406" firstAttribute="top" secondItem="4401" secondAttribute="bottom" constant="39"/>
+                            <constraint id="4408" firstItem="4406" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="trainTopLeft" destination="4207" id="name-outlet-4207"/>
+                        <outlet property="trainTop" destination="4206" id="name-outlet-4206"/>
+                        <outlet property="trainLeft" destination="4209" id="name-outlet-4209"/>
+                        <outlet property="trainBottomLeft" destination="4197" id="name-outlet-4197"/>
+                        <outlet property="trainBottom" destination="4210" id="name-outlet-4210"/>
+                        <outlet property="trainTopRight" destination="4208" id="name-outlet-4208"/>
+                        <outlet property="trainRight" destination="4211" id="name-outlet-4211"/>
+                        <outlet property="trainBottomRight" destination="4212" id="name-outlet-4212"/>
+                        <outlet property="dominoView" destination="4401" id="name-outlet-4401"/>
+                        <outlet property="scoreButton" destination="4406" id="name-outlet-4406"/>
+                    </connections>
+                    <navigationItem title="Mexican Train" id="4191" key="navigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4205" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="train.gif">
+                    <rect key="frame" x="276" y="94" width="75" height="75"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </objects>
+            <point key="canvasLocation" x="1662" y="90"/>
+        </scene>
+        <scene sceneID="12">
+            <objects>
+                <navigationController id="13" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="15">
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="4192" destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="octagon.jpg" width="175" height="171"/>
+        <image name="train.gif" width="250" height="250"/>
+        <image name="train_selected.gif" width="250" height="250"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="iPad"/>
+    </simulatedMetricsContainer>
+</document>
