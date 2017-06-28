@@ -47,6 +47,10 @@ namespace MexicanTrainScoresheet.iOS
             }
             _nameMap = new []{-1,-1,-1,-1,-1,-1,-1,-1};
             _users = GetUsersFromSettingsStore();
+            for (nuint i = 0; i < _users.Count; i++){
+                _names[i].Text = _users.GetItem<NSString>(i).ToString();
+                _nameMap[i] = (int)i;
+            }
             for (int i = 0; i < _trains.Length; i++)
             {
                 var x = i;
@@ -107,7 +111,7 @@ namespace MexicanTrainScoresheet.iOS
 
         void ShowTrainTakenAlert(string user)
         {
-            var alert = UIAlertController.Create("Train Already Taken!", $"This train has already been taken by {user}. Please pick a different one.", UIAlertControllerStyle.Alert);
+            var alert = UIAlertController.Create("Train Already Taken!", $"That train has already been taken by {user}. Please pick a different one.", UIAlertControllerStyle.Alert);
             alert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, _ => { }));
             PresentViewController(alert, true, () => { });
         }
