@@ -97,6 +97,61 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4457" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="70" y="206" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4458" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="70" y="568" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4459" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="70" y="987" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4460" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="364" y="987" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4461" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="656" y="987" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4462" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="656" y="568" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4463" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="656" y="206" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4464" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="710" y="1783" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4465" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="364" y="206" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <variation key="default">
@@ -191,6 +246,22 @@
                             <constraint id="4403" firstItem="4401" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="2"/>
                             <constraint id="4407" firstItem="4406" firstAttribute="top" secondItem="4401" secondAttribute="bottom" constant="39"/>
                             <constraint id="4408" firstItem="4406" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1"/>
+                            <constraint id="4466" firstItem="4207" firstAttribute="bottom" secondItem="4457" secondAttribute="centerY" constant="10"/>
+                            <constraint id="4467" firstItem="4206" firstAttribute="bottom" secondItem="4465" secondAttribute="centerY" constant="10"/>
+                            <constraint id="4468" firstItem="4208" firstAttribute="bottom" secondItem="4463" secondAttribute="centerY" constant="10"/>
+                            <constraint id="4469" firstItem="4211" firstAttribute="bottom" secondItem="4462" secondAttribute="centerY" constant="10"/>
+                            <constraint id="4470" firstItem="4212" firstAttribute="bottom" secondItem="4461" secondAttribute="centerY" constant="10"/>
+                            <constraint id="4471" firstItem="4210" firstAttribute="bottom" secondItem="4460" secondAttribute="centerY" constant="10"/>
+                            <constraint id="4472" firstItem="4197" firstAttribute="bottom" secondItem="4459" secondAttribute="centerY" constant="10"/>
+                            <constraint id="4473" firstItem="4209" firstAttribute="bottom" secondItem="4458" secondAttribute="centerY" constant="10"/>
+                            <constraint id="4474" firstItem="4457" firstAttribute="centerX" secondItem="4207" secondAttribute="centerX"/>
+                            <constraint id="4475" firstItem="4465" firstAttribute="centerX" secondItem="4206" secondAttribute="centerX" constant="1"/>
+                            <constraint id="4476" firstItem="4463" firstAttribute="centerX" secondItem="4208" secondAttribute="centerX"/>
+                            <constraint id="4477" firstItem="4462" firstAttribute="centerX" secondItem="4211" secondAttribute="centerX"/>
+                            <constraint id="4478" firstItem="4461" firstAttribute="centerX" secondItem="4212" secondAttribute="centerX"/>
+                            <constraint id="4479" firstItem="4460" firstAttribute="centerX" secondItem="4210" secondAttribute="centerX" constant="1"/>
+                            <constraint id="4480" firstItem="4459" firstAttribute="centerX" secondItem="4197" secondAttribute="centerX"/>
+                            <constraint id="4481" firstItem="4458" firstAttribute="centerX" secondItem="4209" secondAttribute="centerX"/>
                         </constraints>
                     </view>
                     <connections>
@@ -204,6 +275,14 @@
                         <outlet property="trainBottomRight" destination="4212" id="name-outlet-4212"/>
                         <outlet property="dominoView" destination="4401" id="name-outlet-4401"/>
                         <outlet property="scoreButton" destination="4406" id="name-outlet-4406"/>
+                        <outlet property="labelTopLeft" destination="4457" id="name-outlet-4457"/>
+                        <outlet property="labelTop" destination="4465" id="name-outlet-4465"/>
+                        <outlet property="labelTopRight" destination="4463" id="name-outlet-4463"/>
+                        <outlet property="labelLeft" destination="4458" id="name-outlet-4458"/>
+                        <outlet property="labelRight" destination="4462" id="name-outlet-4462"/>
+                        <outlet property="labelBottomLeft" destination="4459" id="name-outlet-4459"/>
+                        <outlet property="labelBottom" destination="4460" id="name-outlet-4460"/>
+                        <outlet property="labelBottomRight" destination="4461" id="name-outlet-4461"/>
                     </connections>
                     <navigationItem title="Mexican Train" id="4191" key="navigationItem"/>
                 </viewController>

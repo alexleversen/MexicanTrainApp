@@ -22,6 +22,38 @@ namespace MexicanTrainScoresheet.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel labelBottom { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel labelBottomLeft { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel labelBottomRight { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel labelLeft { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel labelRight { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel labelTop { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel labelTopLeft { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel labelTopRight { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton scoreButton { get; set; }
 
         [Outlet]
@@ -61,6 +93,46 @@ namespace MexicanTrainScoresheet.iOS
             if (dominoView != null) {
                 dominoView.Dispose ();
                 dominoView = null;
+            }
+
+            if (labelBottom != null) {
+                labelBottom.Dispose ();
+                labelBottom = null;
+            }
+
+            if (labelBottomLeft != null) {
+                labelBottomLeft.Dispose ();
+                labelBottomLeft = null;
+            }
+
+            if (labelBottomRight != null) {
+                labelBottomRight.Dispose ();
+                labelBottomRight = null;
+            }
+
+            if (labelLeft != null) {
+                labelLeft.Dispose ();
+                labelLeft = null;
+            }
+
+            if (labelRight != null) {
+                labelRight.Dispose ();
+                labelRight = null;
+            }
+
+            if (labelTop != null) {
+                labelTop.Dispose ();
+                labelTop = null;
+            }
+
+            if (labelTopLeft != null) {
+                labelTopLeft.Dispose ();
+                labelTopLeft = null;
+            }
+
+            if (labelTopRight != null) {
+                labelTopRight.Dispose ();
+                labelTopRight = null;
             }
 
             if (scoreButton != null) {

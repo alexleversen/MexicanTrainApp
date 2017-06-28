@@ -2,6 +2,7 @@ using Foundation;
 using System;
 using UIKit;
 using CoreGraphics;
+using System.Threading;
 
 namespace MexicanTrainScoresheet.iOS
 {
@@ -9,7 +10,7 @@ namespace MexicanTrainScoresheet.iOS
     {
         public CGColor PipColor { get; set; }
 		public int PipNumber { get; set; }
-        private const int PIP_RADIUS = 10;
+        const int PIP_RADIUS = 10;
 
         public FullDominoView(IntPtr handle) : base(handle)
 		{
