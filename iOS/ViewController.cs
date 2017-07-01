@@ -13,11 +13,13 @@ namespace MexicanTrainScoresheet.iOS
         NSMutableArray<NSString> _users;
         UILabel[] _names;
         int[] _nameMap;
+        int _currentMovingTrain = -1;
         enum TrainTapMode
         {
             Normal,
             UserSelect,
-            Scoring
+            Scoring,
+            Move
         }
         TrainTapMode _trainTapMode = TrainTapMode.Normal;
         bool _scoring;
@@ -79,9 +81,30 @@ namespace MexicanTrainScoresheet.iOS
             dominoView.AddGestureRecognizer(upSwipe);
         }
 
-        object HandleLongPress(int x)
+        void HandleLongPress(int x)
+        {
+            var alert = UIAlertController.Create("Edit Train", "Would you like to move this train, edit the player's name, or remove the player from the game?", UIAlertControllerStyle.Alert);
+            alert.AddAction(UIAlertAction.Create("Move",UIAlertActionStyle.Default,_=>MoveTrain(x)));
+            alert.AddAction(UIAlertAction.Create("Edit",UIAlertActionStyle.Default,_=>EditUser(x)));
+            alert.AddAction(UIAlertAction.Create("Remove",UIAlertActionStyle.Destructive,_=>DeleteUser(x)));
+            alert.AddAction(UIAlertAction.Create("Cancel",UIAlertActionStyle.Cancel,_=>{}));
+            PresentViewController(alert,true,()=>{});
+        }
+
+        private void DeleteUser(int x)
         {
             throw new NotImplementedException();
+        }
+
+        private void EditUser(int x)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MoveTrain(int x)
+        {
+            _trainTapMode = TrainTapMode.Move;
+            _currentMovingTrain = x;
         }
 
         void HandleTap(int index)
@@ -104,7 +127,32 @@ namespace MexicanTrainScoresheet.iOS
                     }
                     break;
                 case TrainTapMode.Scoring:
-
+					NavigationController.PushViewController(new ScoringViewController(_users.GetItem<NSString>((nuint)index)), true);
+					CancelScoring();
+                    break;
+                case TrainTapMode.Move:
+                    if (_names[index].Text != "")
+                    {
+                        var fromName = _names[_currentMovingTrain].Text;
+                        var toName = _names[index].Text;
+                        _names[_currentMovingTrain].Text = toName;
+                        _names[index].Text = fromName;
+                        var temp = _nameMap[index];
+                        _nameMap[index] = _nameMap[_currentMovingTrain];
+                        _nameMap[_currentMovingTrain] = temp;
+                        var newUsers = new NSMutableArray<NSString>();
+                        for (int i = 0; i < _names.Length; i++)
+                        {
+                            if (_names[i].Text != "")
+                            {
+                                newUsers.Add(new NSString(_names[i].Text));
+                            }
+                        }
+                        _users = newUsers;
+                        PutUsersToSettingsStore();
+                        _trainTapMode = TrainTapMode.Normal;
+                        _currentMovingTrain = -1;
+                    }
                     break;
             }
         }
@@ -182,13 +230,13 @@ namespace MexicanTrainScoresheet.iOS
                 scoreButton.SetTitle("Cancel Scoring", UIControlState.Normal);
             }else{
                 CancelScoring();
-                _scoring = false;
-                scoreButton.SetTitle("Score Round", UIControlState.Normal);
             }
         }
 
         void CancelScoring(){
-            //TODO: Implement
+            _trainTapMode = TrainTapMode.Normal;
+            _scoring = false;
+            scoreButton.SetTitle("Score Round", UIControlState.Normal);
         }
 
         void SettingsButton_Clicked(object sender, EventArgs e)
@@ -198,17 +246,11 @@ namespace MexicanTrainScoresheet.iOS
         }
 
         void DecrementPips(){
-			dominoView.PipNumber = dominoView.PipNumber - 1;
-			var rand = new Random();
-			dominoView.PipColor = new CGColor(((float)rand.Next(0, 100)) / 100, ((float)rand.Next(0, 100)) / 100, ((float)rand.Next(0, 100)) / 100);
-			dominoView.SetNeedsDisplay();
+            dominoView.DecrementPips();
         }
 
         void IncrementPips(){
-            dominoView.PipNumber = dominoView.PipNumber + 1;
-            var rand = new Random();
-            dominoView.PipColor = new CGColor(((float)rand.Next(0, 100)) / 100, ((float)rand.Next(0, 100)) / 100, ((float)rand.Next(0, 100)) / 100);
-            dominoView.SetNeedsDisplay();
+            dominoView.IncrementPips();
         }
     }
 }

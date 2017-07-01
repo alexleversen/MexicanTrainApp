@@ -14,5 +14,8 @@ namespace MexicanTrainScoresheet.iOS
     [Register ("FullDominoView")]
     partial class FullDominoView
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

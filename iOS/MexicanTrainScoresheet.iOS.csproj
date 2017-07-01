@@ -88,6 +88,10 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\rsz_mexican_train.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\rsz_1mexican_train.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\rsz_2mexican_train.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\rsz_3mexican_train.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -118,11 +122,13 @@
     <Compile Include="FullDominoView_.designer.cs">
       <DependentUpon>FullDominoView.cs</DependentUpon>
     </Compile>
+    <Compile Include="HalfDominoView.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\octagon.jpg" />
     <BundleResource Include="Resources\train.gif" />
     <BundleResource Include="Resources\train_selected.gif" />
+    <BundleResource Include="Resources\mexican_train.gif" />
   </ItemGroup>
   <Import Project="..\MexicanTrainScoresheet\MexicanTrainScoresheet.projitems" Label="Shared" Condition="Exists('..\MexicanTrainScoresheet\MexicanTrainScoresheet.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

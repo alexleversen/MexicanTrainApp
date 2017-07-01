@@ -9,10 +9,11 @@ namespace MexicanTrainScoresheet.iOS
     public partial class FullDominoView : UIView
     {
         public CGColor PipColor { get; set; }
-		public int PipNumber { get; set; }
+        public int PipNumber { get; set; }
         const int PIP_RADIUS = 10;
 
-        public FullDominoView(IntPtr handle) : base(handle)
+
+    public FullDominoView(IntPtr handle) : base(handle)
 		{
 		}
 
@@ -33,6 +34,29 @@ namespace MexicanTrainScoresheet.iOS
                 ctx.DrawPath(CGPathDrawingMode.FillStroke);
             }
 		}
+
+        public void DecrementPips(){
+            if (PipNumber >= 1)
+            {
+                PipNumber--;
+                PipColor = CGColorFromNSNumberArray(ApplicationDefaults.DefaultPipColors.GetItem<NSMutableArray<NSNumber>>((nuint)PipNumber - 1));
+                SetNeedsDisplay();
+            }
+        }
+
+        public void IncrementPips(){
+            if (PipNumber < 12)
+            {
+                PipNumber++;
+                PipColor = CGColorFromNSNumberArray(ApplicationDefaults.DefaultPipColors.GetItem<NSMutableArray<NSNumber>>((nuint)PipNumber - 1));
+                SetNeedsDisplay();
+            }
+		}
+
+        private CGColor CGColorFromNSNumberArray(NSMutableArray<NSNumber> numberArray)
+        {
+            return new CGColor(numberArray.GetItem<NSNumber>(0).FloatValue, numberArray.GetItem<NSNumber>(1).FloatValue, numberArray.GetItem<NSNumber>(2).FloatValue );
+        }
 
         private void DrawPips(CGContext ctx)
         {

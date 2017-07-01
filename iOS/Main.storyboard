@@ -314,6 +314,7 @@
         <image name="octagon.jpg" width="175" height="171"/>
         <image name="train.gif" width="250" height="250"/>
         <image name="train_selected.gif" width="250" height="250"/>
+        <image name="mexican_train.gif" width="250" height="250"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination" type="iPad"/>
