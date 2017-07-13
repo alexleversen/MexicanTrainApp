@@ -25,10 +25,6 @@ namespace MexicanTrainScoresheet.iOS
         public override void Draw(CGRect rect)
         {
             using (var ctx = UIGraphics.GetCurrentContext()){
-                ctx.SetLineWidth(10);
-                ctx.AddRect(rect);
-                ctx.SetStrokeColor(new CGColor(0.0f, 0.0f, 0.0f));
-                ctx.DrawPath(CGPathDrawingMode.Stroke);
                 DrawPips(ctx);
             }
         }
@@ -154,7 +150,7 @@ namespace MexicanTrainScoresheet.iOS
                             ApplicationDefaults.DefaultPipColors
                                          .GetItem<NSArray<NSNumber>>((System.nuint)_pipCount - 1)
                                          .GetItem<NSNumber>(2).FloatValue));
-			ctx.AddArc(x, y, PIP_RADIUS, 0, (float)(2 * Math.PI), true);
+			ctx.AddArc(x+50, y+38, PIP_RADIUS, 0, (float)(2 * Math.PI), true);
 			ctx.DrawPath(CGPathDrawingMode.Fill);
 		}
     }

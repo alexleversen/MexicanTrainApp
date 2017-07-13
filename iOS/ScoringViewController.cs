@@ -28,6 +28,20 @@ namespace MexicanTrainScoresheet.iOS
 		{
 			_score += i;
             scoreLabel.Text = $"Score: {_score}";
+            var scoreDict = NSUserDefaults.StandardUserDefaults.DictionaryForKey(ApplicationDefaults.ScoreDictionaryKey);
+            NSMutableDictionary newDict = null;
+            if(scoreDict == null){
+                newDict = new NSMutableDictionary();
+            }else{
+                var temp = NSUserDefaults.StandardUserDefaults.DictionaryForKey(ApplicationDefaults.ScoreDictionaryKey).MutableCopy();
+                if(temp == null){
+                    newDict = new NSMutableDictionary();
+                }else{
+                    newDict = (NSMutableDictionary)temp;
+                }
+            }
+            newDict.Add(new NSString(_userName),new NSNumber(_score));
+            NSUserDefaults.StandardUserDefaults.SetValueForKey(newDict, ApplicationDefaults.ScoreDictionaryKey);
         }
 
         public override void ViewDidLoad()

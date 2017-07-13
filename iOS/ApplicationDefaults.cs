@@ -6,6 +6,7 @@ namespace MexicanTrainScoresheet.iOS
     public class ApplicationDefaults
     {
         public static NSString UserListSettingsKey = new NSString("UserListSettingsKey");
+        public static NSString ScoreDictionaryKey = new NSString("ScoreDictionaryKey");
 
 
 		public static NSMutableArray<NSMutableArray<NSNumber>> DefaultPipColors = new NSMutableArray<NSMutableArray<NSNumber>>

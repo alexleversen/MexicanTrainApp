@@ -14,6 +14,8 @@ namespace MexicanTrainScoresheet.iOS
         UILabel[] _names;
         int[] _nameMap;
         int _currentMovingTrain = -1;
+        NSMutableDictionary _scoreDict;
+
         enum TrainTapMode
         {
             Normal,
@@ -27,9 +29,26 @@ namespace MexicanTrainScoresheet.iOS
 		{
 		}
 
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+			for (nuint i = 0; i < _users.Count; i++)
+			{
+				NSObject val = null;
+                var tempDict = NSUserDefaults.StandardUserDefaults.DictionaryForKey(ApplicationDefaults.ScoreDictionaryKey);
+                tempDict.TryGetValue(_users.GetItem<NSString>(i), out val);
+                _names[(int)i].Text = _users.GetItem<NSString>(i) + "\nScore: " + (((NSNumber)val).ToString() ?? "0");
+				_nameMap[i] = (int)i;
+			}
+        }
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            var tempDict = NSUserDefaults.StandardUserDefaults.DictionaryForKey(ApplicationDefaults.ScoreDictionaryKey)?.MutableCopy();
+            if(tempDict != null){
+                _scoreDict = (NSMutableDictionary)tempDict;
+            }
             _trains = new[]{
                 trainTopLeft,    trainTop,    trainTopRight,
                 trainLeft,                    trainRight,
@@ -49,8 +68,11 @@ namespace MexicanTrainScoresheet.iOS
             }
             _nameMap = new []{-1,-1,-1,-1,-1,-1,-1,-1};
             _users = GetUsersFromSettingsStore();
-            for (nuint i = 0; i < _users.Count; i++){
-                _names[i].Text = _users.GetItem<NSString>(i).ToString();
+            for (nuint i = 0; i < _users.Count; i++)
+            {
+                NSObject val = null;
+                NSUserDefaults.StandardUserDefaults.DictionaryForKey(ApplicationDefaults.ScoreDictionaryKey)?.TryGetValue(_names[i], out val);
+                _names[i].Text = _users.GetItem<NSString>(i) + "\nScore: " + (NSString)val ?? "0";
                 _nameMap[i] = (int)i;
             }
             for (int i = 0; i < _trains.Length; i++)
@@ -127,8 +149,14 @@ namespace MexicanTrainScoresheet.iOS
                     }
                     break;
                 case TrainTapMode.Scoring:
-					NavigationController.PushViewController(new ScoringViewController(_users.GetItem<NSString>((nuint)index)), true);
-					CancelScoring();
+                    try
+                    {
+                        var item = _users.GetItem<NSString>((nuint)_nameMap[index]);
+                        NavigationController.PushViewController(new ScoringViewController(item), true);
+						CancelScoring();
+                    } catch(ArgumentOutOfRangeException) {
+                        Console.WriteLine("Tapped empty train");
+                    }
                     break;
                 case TrainTapMode.Move:
                     if (_names[index].Text != "")
